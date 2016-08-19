@@ -1,0 +1,114 @@
+
+<!--<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar ng-class="{'profile-color': ('app.profile' | includedByState), 'settings-color': ('app.settings' | includedByState), 'product-color': ('app.product-detail' | includedByState), 'feed-color': ('app.feed' | includedByState), 'shop-color': ('app.shop' | includedByState), 'cart-color': ('app.cart' | includedByState), 'shipping-address-color': ('app.shipping-address' | includedByState), 'checkout-color': ('app.checkout' | includedByState)}">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content has-bouncing="false" scroll="false" class="menu-outer left-menu">
+      <div multi-bg="['img/bg-img4.jpeg']">
+        <div class="row menu-top-options">
+          <div class="col col-top">
+            <ion-list>
+              <ion-item ui-sref-active="active" class="item-icon-left" menu-close ui-sref="app.feed">
+                <i class="menu-icon icon ion-ios-world"></i>
+                <h2 class="menu-text">Schedule</h2>
+              </ion-item>
+              <ion-item ui-sref-active="active" class="item-icon-left" menu-close ui-sref="app.news">
+                <i class="menu-icon icon ion-bag"></i>
+                <h2 class="menu-text">Artists</h2>
+              </ion-item>
+              <ion-item ui-sref-active="active" class="item-icon-left" menu-close ui-sref="app.news">
+                <i class="menu-icon icon ion-ios-cart"></i>
+                <h2 class="menu-text">Links</h2>
+              </ion-item>
+            </ion-list>
+          </div>
+        </div>
+        <div class="row menu-bottom-options">
+          <div class="col col-bottom">
+            <ion-list>
+             PROFILE IMAGE 
+              <ion-item class="user-item" menu-close ui-sref="app.profile.posts({userId:loggedUser._id})">
+                
+                <div class="user-image-outer">
+                  <pre-img ratio="_1_1" helper-class="rounded-image">
+                    <img class="user-image" ng-src="{{loggedUser.picture}}" spinner-on-load>
+                  </pre-img>
+                </div>
+                <h2 class="menu-text">{{loggedUser.name}}</h2>
+                <div class="user-inbox">
+                  <i class="menu-icon icon ion-ios-filing"></i>
+                  <span class="inbox-unread">13</span>
+                </div>
+              </ion-item> 
+              
+              <ion-item class="full-width-item" menu-close ui-sref="app.shop.sale">
+                <button class="button button-full button-positive">
+                  Powered by PledgeMusic!
+                </button>
+              </ion-item>
+            </ion-list>
+          </div>
+        </div>
+      </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>  -->
+
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+<ion-nav-title align-title="center">
+      <img src="img/outlawtoplogo.png" height="42" width="78">
+    </ion-nav-title>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content class="menu-background" ng-repeat="menu in menus | orderBy: 'id'">
+     <span style="font-family: Antonio-Regular; color: white; font-size: 30px"><br>&nbsp;{{menu.city}}&nbsp;</span><span style="font-family: Antonio-Regular; color: white; font-size: 20px">- {{menu.date}}</span>
+      <ion-list class="my-menu"></br>
+        <ion-item nav-clear menu-close><a style="color: white" href="{{menu.link1}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="{{menu.icon1}}"></i>&nbsp;&nbsp;&nbsp;{{menu.text1}}</a>
+        </ion-item></br>
+       <ion-item nav-clear menu-close><a style="color: white" href="{{menu.link2}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="{{menu.icon2}}"></i>&nbsp;&nbsp;&nbsp;{{menu.text2}}</a>
+        </ion-item></br>
+        <ion-item nav-clear menu-close><a style="color: white" href="{{menu.link3}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="{{menu.icon3}}"></i>&nbsp;&nbsp;&nbsp;{{menu.text3}}</a>
+        </ion-item></br>
+        <ion-item nav-clear menu-close><a style="color: white" href="{{menu.link4}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="{{menu.icon4}}"></i>&nbsp;&nbsp;&nbsp;{{menu.text4}}</a>
+        </ion-item></br>
+        <ion-item nav-clear menu-close><a style="color: white" href="{{menu.link5}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="{{menu.icon5}}"></i>&nbsp;&nbsp;&nbsp;{{menu.text5}}</a>
+        </ion-item></br>
+        <ion-item nav-clear menu-close><a style="color: white" href="{{menu.link6}}" onclick="window.open(this.href, '_system', 'location=yes');return false;">&nbsp;&nbsp;&nbsp;&nbsp;<i class="{{menu.icon6}}"></i>&nbsp;&nbsp;&nbsp;{{menu.text6}}</a>
+        </ion-item></br>
+        <ion-item nav-clear menu-close><a style="color: white" href="{{menu.link7}}" onclick="window.open(this.href, '_system', 'location=yes');return false;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="{{menu.icon7}}"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{menu.text7}}</a>
+        </ion-item></br>
+        <ion-item nav-clear menu-close><a style="color: white" href="{{menu.link8}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="{{menu.icon8}}"></i>&nbsp;&nbsp;&nbsp;{{menu.text8}}</a>
+        </ion-item></br>
+        <ion-item nav-clear menu-close><a style="color: white" href="{{menu.link9}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="{{menu.icon8}}"></i>&nbsp;&nbsp;&nbsp;{{menu.text9}}</a>
+        </ion-item>
+        <!--<ion-item nav-clear menu-close href="#/app/email">
+          Join the Family
+        </ion-item>-->
+      </ion-list><br><br><br>
+      <p class="text-center">
+      <img src="http://songchant.com/outlaw/images/sponsorlogo.png" height="47" width="200" border="0">
+      </p>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
